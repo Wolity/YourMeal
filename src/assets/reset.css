@@ -3,11 +3,12 @@
    License: none (public domain)
 */
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif !important;
   font-optical-sizing: auto;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-weight: 400;
 }
 html,
 body,

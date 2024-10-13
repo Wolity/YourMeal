@@ -1,7 +1,10 @@
 <script setup>
+import Menu from "./components/Menu.vue";
 import Header from "./components/Header.vue";
 </script>
-<template>
-  <Header />
+<template><Header /> <Menu />
+
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

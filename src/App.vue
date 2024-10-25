@@ -1,10 +1,17 @@
 <script setup>
 import Menu from "./components/Menu.vue";
 import Header from "./components/Header.vue";
+import Cards from "./components/Cards.vue";
 </script>
-<template><Header /> <Menu />
-
+<template>
+  <Header />
+  <Menu />
+  <main>
+    <Cards/>
+  </main>
 </template>
-<style scoped lang="scss">
-
+<style lang="scss">
+body{
+ background: #F9F9F9;
+}
 </style>

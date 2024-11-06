@@ -74,11 +74,6 @@ section {
 }
 @media screen and (max-width: 1024px) {
   section {
-  h2 {
-    font-size: var(--size-40-40-28-28);
-    font-weight: 600;
-    margin-top:50px ;
-  }
   div {
     display: grid;
     grid-template-columns: 1fr 1fr;

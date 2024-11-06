@@ -42,14 +42,48 @@ section {
         border-radius: 12px;
       }
       h3 {
+        font-size: var(--size-24-24-16-16);
+        margin-top: 16px;
       }
       p {
+        font-size: var(--size-16-16-12-12);
+        margin-top: 8px;
       }
       span {
+        opacity: 0.6;
+        font-size: var(--size-16-16-12-12);
+        margin-top: 8px;
       }
       button {
+        text-align: center;
+        margin-top: 8px;
+        padding-top: 11px;
+        padding-right: 92px;
+        padding-bottom: 11px;
+        padding-left: 92px;
+        gap: 10px;
+    border: none;        
+    border-radius: 12px;
+    transition: background 0.3s ease
+      }
+      button:hover{
+        background:#FFAB08 ;
       }
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  section {
+  h2 {
+    font-size: var(--size-40-40-28-28);
+    font-weight: 600;
+    margin-top:50px ;
+  }
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+}
 </style>
+

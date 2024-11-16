@@ -8,41 +8,47 @@ import pizza from "../assets/menu/pizza.svg";
 import wok from "../assets/menu/wok.svg";
 import dessert from "../assets/menu/dessert.svg";
 import sauce from "../assets/menu/sauce.svg";
+import { defineProps } from "vue";
+
+defineProps({
+  menuActive:String
+})
+
 let menu = [
   {
-    name: "Бургеры",
+    name: "burgers",
     src: burger,
   },
   {
-    name: "Закуски",
+    name: "zakuski",
     src: onion,
   },
   {
-    name: "Хот-Доги",
+    name: "hot-Dogs",
     src: hotdog,
   },
   {
-    name: "Комбо",
+    name: "combo",
     src: combo,
   },
   {
-    name: "Шаурма",
+    name: "shaurma",
     src: shaurma,
   },
   {
-    name: "Пицца",
+    name: "pizza",
     src: pizza,
   },
   {
-    name: "Вок",
+    name: "wok",
     src: wok,
   },
   {
-    name: "Дессерты",
+    name: "desserts",
     src: dessert,
   },
   {
-    name: "Соусы",
+    name: "sauces",
     src: sauce,
   },
 ];
@@ -51,7 +57,7 @@ let menu = [
 <template>
   <nav>
     <ul>
-      <li v-for="(item, i) in menu" :key="i" :class="{ active: i == 0 }">
+      <li v-for="(item, i) in menu" :key="i" :class="{ active: item.name == menuActive }">
         <img :src="item.src" />
         <a>{{ item.name }}</a>
       </li>

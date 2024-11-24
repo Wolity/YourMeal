@@ -6,15 +6,15 @@ import Cards from "./components/Cards.vue";
 import { onMounted, ref } from "vue";
 //переменные
 let products = ref([]);
-let menuActive = ref("zakuski");
+let menuActive = ref("burgers");
 //функция
 async function getProducts() {
   let data = await fetch("https://04467dff024a9932.mokky.dev/products");
   products.value = await data.json();
   console.log(products.value);
 }
-onMounted(() => {
-  getProducts();
+onMounted(async () => {
+  await getProducts();
 });
 </script>
 <template>
@@ -22,7 +22,7 @@ onMounted(() => {
   <Menu :menuActive="menuActive" />
   <main>
     <Basket class="main_basket" />
-    <Cards />
+    <Cards v-if = "products.length>0" :content="products[0][menuActive]" />
   </main>
 </template>
 <style lang="scss">

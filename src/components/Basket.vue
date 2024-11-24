@@ -16,9 +16,9 @@
         <h3>550р</h3>
       </div>
       <nav>
-          <button>-</button>
-          <span>0</span>
-          <button>+</button>
+        <button>-</button>
+        <span>0</span>
+        <button>+</button>
       </nav>
     </article>
     <div class="basket_price">
@@ -33,33 +33,61 @@
 .basket {
   .basket_top {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     h2 {
+      font-size: var(--size-24-24-16-16);
     }
     span {
+      font-size: var(--size-12-12-12-12);
     }
   }
   .basket_card {
+    margin-top: 12px;
     align-items: center;
     display: flex;
-    img{
-        width:64px;
-        
+    img {
+      margin-right: 6px;
+      width: 64px;
+      height: 52px;
+      border-radius: 8px;
     }
-    div{
-       p{
-       }
-       span{
-       }
-       h3{
-
-       } 
+    div {
+      p {
+      }
+      span {
+        font-size: var(--size--12-12-12-12);
+        margin-top: 1px;
+        opacity: 0.6;
+      }
+      h3 {
+        font-size: var(--size--12-12-12-12);
+        margin-top: 6px;
+      }
     }
-    nav{
-margin-left: auto;
+    nav {
+      font-size: var(--size--12-12-12-12);
+      margin-left: auto;
+      button {
+        font-size: var(--size-16-16-12-12);
+        border: none;
+      }
+      span {
+        margin-left: 18px;
+        margin-right: 15px;
+        font-size: var(--size-16-16-12-12);
+      }
     }
   }
-  .basket_price{
-    
+  .basket_price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+    }
+
+    h3 {
+    }
   }
 }
 </style>

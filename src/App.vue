@@ -16,13 +16,29 @@ async function getProducts() {
 onMounted(async () => {
   await getProducts();
 });
+let basket = ref([]);
+function addItemBasket(item) {
+  for (const i of basket.value) {
+    if (i.id == item.id) {
+      i.count += 1;
+      return;
+    }
+  }
+  item.count = 1;
+  basket.value.push(item)
+  console.log(basket.value)
+}
 </script>
 <template>
   <Header />
   <Menu :menuActive="menuActive" />
   <main>
     <Basket class="main_basket" />
-    <Cards v-if = "products.length>0" :content="products[0][menuActive]" />
+    <Cards
+      v-if="products.length > 0"
+      :content="products[0][menuActive]"
+      @addBasket="(item) => addItemBasket(item)"
+    />
   </main>
 </template>
 <style lang="scss">
@@ -36,6 +52,11 @@ main {
   gap: 30px;
   .main_basket {
     margin-top: 135px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  main {
+    grid-template-columns: 1fr;
   }
 }
 </style>

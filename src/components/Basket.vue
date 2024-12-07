@@ -23,7 +23,7 @@
     </article>
     <div class="basket_price">
       <h4>Итого</h4>
-      <h3>1300</h3>
+      <h3>1300₽</h3>
     </div>
     <button class="basket_buy">Оформить заказ</button>
   </section>
@@ -83,11 +83,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
+    
     h4 {
     }
 
     h3 {
     }
   }
+  .basket_buy{
+      text-align: center;
+        margin-top: 24px;
+        padding-top: 11px;
+        padding-right: 92px;
+        padding-bottom: 11px;
+        padding-left: 92px;
+        gap: 10px;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        background: #FF7020;
+    }
 }
 </style>

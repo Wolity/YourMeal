@@ -14,7 +14,7 @@ defineProps({
         <h3>{{ item.price }}₽</h3>
         <p>{{ item.title }}</p>
         <span>{{ item.weight }}</span>
-        <button>Добавить</button>
+        <button @click="$emit('addBasket', item)">Добавить</button>
       </article>
     </div>
   </section>
@@ -22,6 +22,7 @@ defineProps({
 
 <style scoped lang="scss">
 section {
+  width: 100%;
   h2 {
     font-size: var(--size-40-40-28-28);
     font-weight: 600;

@@ -57,7 +57,7 @@ let menu = [
 <template>
   <nav>
     <ul>
-      <li v-for="(item, i) in menu" :key="i" :class="{ active: item.name == menuActive }">
+      <li v-for="(item, i) in menu" :key="i" :class="{ active: item.name == menuActive }" @click="$emit('changeMenu',item.name)">
         <img :src="item.src" />
         <a>{{ item.name }}</a>
       </li>

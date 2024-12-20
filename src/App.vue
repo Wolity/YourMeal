@@ -3,6 +3,7 @@ import Basket from "./components/Basket.vue";
 import Menu from "./components/Menu.vue";
 import Header from "./components/Header.vue";
 import Cards from "./components/Cards.vue";
+import Footer from "./components/Footer.vue";
 import { onMounted, ref } from "vue";
 //переменные
 let products = ref([]);
@@ -25,13 +26,16 @@ function addItemBasket(item) {
     }
   }
   item.count = 1;
-  basket.value.push(item)
-  console.log(basket.value)
+  basket.value.push(item);
+  console.log(basket.value);
+}
+function cMenu(item) {
+  menuActive.value = item
 }
 </script>
 <template>
   <Header />
-  <Menu :menuActive="menuActive" />
+  <Menu :menuActive="menuActive" @changeMenu="cMenu" />
   <main>
     <Basket class="main_basket" />
     <Cards
@@ -40,6 +44,7 @@ function addItemBasket(item) {
       @addBasket="(item) => addItemBasket(item)"
     />
   </main>
+  <Footer />
 </template>
 <style lang="scss">
 body {

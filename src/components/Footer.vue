@@ -29,7 +29,7 @@ footer {
   }
 }
 .connect {
-  padding-left: 355px;
+  padding-left: 360px;
   h1 {
     font-size: var(--size-24-24-16-16);
     padding-bottom: 24px;
